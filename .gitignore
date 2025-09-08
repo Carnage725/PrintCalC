@@ -2,15 +2,14 @@
 __pycache__/
 *.py[cod]
 *.egg-info/
-*.egg
 .eggs/
 
-# Virtual env
+# Virtual envs
 .venv/
 venv/
 ENV/
 
-# OS
+# OS junk
 .DS_Store
 Thumbs.db
 
@@ -22,7 +21,5 @@ build/
 dist/
 *.spec
 
-# Logs & misc
+# Logs
 *.log
-*.tmp
-*.cache
