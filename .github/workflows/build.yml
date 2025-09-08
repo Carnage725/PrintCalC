@@ -26,12 +26,13 @@ jobs:
             --add-data "app.py;." `
             launcher.py
 
-      - name: Include docs (LICENSE/README)
+      - name: Include docs (ZIP README)
         shell: pwsh
         run: |
+          Copy-Item -Path ZIP-README.md -Destination dist\PrintCalC\README.txt -ErrorAction SilentlyContinue
           Copy-Item -Path LICENSE -Destination dist\PrintCalC -ErrorAction SilentlyContinue
-          Copy-Item -Path README.md -Destination dist\PrintCalC -ErrorAction SilentlyContinue
           Copy-Item -Path THIRD_PARTY_NOTICES.md -Destination dist\PrintCalC -ErrorAction SilentlyContinue
+
 
       - name: Zip artifact
         shell: pwsh
@@ -63,10 +64,10 @@ jobs:
             --add-data "app.py:." \
             launcher.py
 
-      - name: Include docs (LICENSE/README)
+      - name: Include docs (ZIP README)
         run: |
+          cp -f "ZIP-README.md" "dist/PrintCalC/README.txt" 2>/dev/null || true
           cp -f LICENSE dist/PrintCalC 2>/dev/null || true
-          cp -f README.md dist/PrintCalC 2>/dev/null || true
           cp -f THIRD_PARTY_NOTICES.md dist/PrintCalC 2>/dev/null || true
 
       - name: Zip artifact
