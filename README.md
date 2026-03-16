@@ -1,8 +1,7 @@
 # PrintCalC 🖨️ — Fair per-page print pricing (MVP)
 
 ## Downloads
-- **macOS**: [PrintCalC-mac.zip](https://github.com/Carnage725/PrintCalC/releases/latest/download/PrintCalC-mac.zip)
-- **Windows**: coming soon
+- **macOS & Windows:** see [Releases]()
 
 
 **PrintCalC** analyzes each PDF page locally and gives a simple, shop-friendly price:
